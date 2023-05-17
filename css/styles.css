@@ -1,0 +1,462 @@
+/*
+Color options: I should probably just go plain and simple unless I reeeally get inspired
+so, maybe white/light grey background with dark green/blue/red or black text
+
+light grey: d6d6d6 or d3d3d3 or e0e0e0
+green: 1A733E or 00682a
+darker green: 004E20 or 174428
+rusty red: 6C1D00 or 581801
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: darkcyan;
+    --secondary-color: #e0b354;
+    --bg-color: #edf7f8;
+    --font-color: #264653;
+    --light-font-color: whitesmoke;
+    --border-line: 1px solid lightgray;
+    --shadow-setup: 1px 1px 3px #666;
+    --normal-font: 1em;
+    --small-font: 1.125em;
+    --medium-font: 1.25em;
+    --large-font: 1.375em;
+    --larger-font: 1.5em;
+    --header-font: 2.5em;
+}
+
+body {
+    font-family: 'Mukta', sans-serif;
+    font-weight: 400;
+    line-height: var(--large-font);
+    background-color: var(--bg-color);
+    color: var(--font-color);
+    /* border: 5px outset #264653; */
+}
+
+main, section {
+    padding-bottom: 25px;
+}
+
+h1 {
+    font-weight: 400;
+    font-size: var(--header-font);
+    text-shadow: var(--shadow-setup);
+    padding: 10px;
+} 
+
+h2 {
+    font-weight: 700;
+    font-size: var(--larger-font);
+}
+
+a {
+    color: var(--font-color);
+    font-size: var(--small-font);
+}
+
+a:visited {
+    color: var(--primary-color);
+}
+
+a:hover, a:focus {
+    /*Removes underline upon hover*/
+    text-decoration: none;
+}
+
+a:active {
+    /*Selected link*/
+    color: red;
+}
+
+button, .submit-button, .button {
+    border: none;
+    font-family: inherit;
+    background-color: var(--primary-color);
+    color: var(--light-font-color);
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+    border-bottom: 3px solid rgba(0, 0, 0, .3);
+    transition: .42s opacity, .42s Font-size;
+    transition-property: opacity;
+}
+
+button:hover, button:focus, 
+.submit-button:hover, .submit-button:focus,
+.button:hover, .button:focus {
+    /*Turns mouse into pointing hand*/
+    cursor: pointer;
+    opacity: .8;
+    font-size: 18px;
+}
+
+/* .button_secondary {
+    background-color: var(--secondary-color);
+    color: var(--dark-grey);
+} */
+
+/* ---------------HEADER------------ */
+
+.page-header {
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    /* background-color: #e6e6e6; */
+    border-bottom: var(--border-line);
+}
+
+.page-header_item {
+    flex: 0 1 200px;
+}
+
+.page-header_item:last-child {
+    flex-grow: 1;
+    text-align: right;
+}
+
+.nav-list {
+    list-style-type: none;
+}
+
+.nav-list li {
+    display: inline-block;
+    margin-right: 15px;
+    font-weight: 700;
+}
+
+.nav-list_item--active {
+    text-decoration: none;
+    /* opacity: .95; */
+    font-size: var(--medium-font);
+}
+
+.logo {
+    height: fit-content;
+}
+
+/* Next 4 chunks for main nav animation */
+nav.main-nav a::before, nav.main-nav a::after {
+    /* position: absolute; */
+    opacity: 0;
+    font-size: var(--medium-font);
+    top: 0px;
+    transition: all 0.3s;
+}
+
+nav.main-nav a::before {
+    content: '{';
+    left: 0px;
+    transform: translateX(10px);
+}
+
+nav.main-nav a::after {
+    content: '}';
+    right: 0px;
+    transform: translateX(-10px);
+}
+
+nav.main-nav a:hover::before, nav.main-nav a:hover::after {
+    opacity: 1;
+    transform: translateX(0px);
+}
+
+/* ---------FOOTER------------ */
+
+.page-footer {
+    clear: both;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border-top: var(--border-line);
+    margin-top: 35px;
+    padding: 25px;
+}
+
+/* -----------HOME PAGE----------- */
+
+.profile_portrait {
+    float: left;
+    width: 250px;
+    margin: 35px;
+    border-radius: 50%;
+}
+
+.profile, .about {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+span.profile_web {
+    background-color: black;
+    color: var(--secondary-color);
+}
+
+.profile p {
+    font-size: var(--small-font);
+}
+
+/* -------------ABOUT PAGE----------- */
+
+.about-grid h2, .about-header, .work-header {
+    text-align: center;
+}
+
+.about-grid {
+    display: flex;
+    justify-content: space-between;
+}
+
+.about-grid li {
+    font-size: var(--medium-font);
+    list-style-type: none;
+    padding-bottom: 3px;
+    text-align: center;
+}
+
+.about-grid li::first-letter {
+    font-weight: 700;
+}
+
+.about-button {
+    display: flex;
+    justify-content: center;
+    margin: 25px auto;
+}
+
+/* To change the sun's color */
+@keyframes color-change {
+    from {
+        fill: #edc655;
+    }
+    to {
+        fill: #f76414;
+    }
+}
+
+.sun {
+    /* animation-duration: 4s;
+    animation-name: color-change;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear; */
+    /* ----Shorthand of all those:------ */
+    animation: 2s color-change infinite alternate linear;
+}
+
+/* To move or grow the 2 clouds */
+@keyframes cloud-move {
+    from {
+        transform: translate(0, 50px);
+    }
+    to {
+        transform: translate(400px, 50px);
+    }
+}
+
+@keyframes cloud-grow {
+    from {
+        transform: scale(1.5, 1.5);
+        transform-origin: top left;
+    }
+    to {
+        transform: scale(0.6, 0.6);
+        transform-origin: top right;
+    }
+}
+
+.cloud-front {
+    animation: 25s cloud-grow infinite alternate linear;
+    /* animation: 15s cloud-move infinite alternate linear; */
+}
+
+@keyframes cloud-move-reverse {
+    from {
+        transform: translate(446px, 48px);
+    }
+    to {
+        transform: translate(100px, 48px);
+    }
+}
+
+.cloud-back {
+    animation: 34s cloud-move-reverse infinite alternate linear;
+}
+
+table {
+    margin: 0 auto;
+    font-size: var(--small-font);
+    border: var(--border-line);
+}
+
+td:nth-child(even) {
+    text-align: center;
+}
+
+td, th {
+    border: var(--border-line);
+    padding: 0 7px;
+}
+
+/* -------------WORK PAGE------------- */
+
+/* grid fallback */
+.project-list {
+    display: inline-block;
+    width: 33%;
+}
+
+@supports (display: grid) {
+    .project-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        /* grid-template-rows: 300px 300px; */
+        gap: 15px;
+        margin: 5px;
+        width: auto;
+    }
+
+    .project-list_item {
+        background-color: lightgray;
+        padding: 10px;
+        border: 1px solid black;
+        border-radius: 5px;
+        width: auto;
+        min-height: auto;
+        margin: 0;
+        box-shadow: var(--shadow-setup);
+    }
+
+    .project-list_item:last-child {
+        grid-column: 3 / 3;
+        grid-row: 1 / 3;
+    }
+}
+
+/* ----------CONTACT PAGE---------- */
+
+.contact h2, .contact h1 {
+    text-align: center;
+}
+
+.form-grid, .contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 35px;
+}
+
+.form-grid_item {
+    flex: 0 1 32px;
+}
+
+.form-grid label {
+    font-size: var(--medium-font);
+}
+
+.contact-info p {
+    margin: 0;
+}
+
+/* Form 30%/70% float fallback layout */
+/* .form-grid {
+    display: inline-block;
+    max-width: 33%;
+}
+
+input, textarea, .form-grid button {
+    clear: both;
+    float: right;
+    width: 70%;
+}
+
+label {
+    float: left;
+    width: 30%;
+    text-align: right;
+    padding: 0.25em 1em 0 0;
+}
+
+@supports (display: grid) {
+    .form-grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        max-width: auto;
+        gap: 10px;
+        margin: 5px;
+    }
+
+
+} */
+
+/* ----------MEDIA QUERIES--------- */
+
+@media all and (max-width: 500px) {
+    .project-list {
+        grid-template-columns: 1fr;
+    }
+    .profile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media all and (min-width: 500px) and (max-width: 750px) {
+    .project-list {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+@media all and (max-width: 750px) {
+    .project-list {
+        gap: 10px;
+    }
+    .project-list_item:last-child {
+        grid-column: auto / auto;
+        grid-row: auto / auto;
+    }
+    h1 {
+        font-size: var(--larger-font);
+    }
+    h2 {
+        font-size: var(--medium-font);
+    }
+    .nav-list_item--active{
+        font-size: var(--small-font);
+    }
+    p, a, .about-grid li, .profile p {
+        font-size: var(--normal-font);
+    }
+    .about-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    .nav-list {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media all and (min-width: 1400px) {
+    .project-list {
+        margin: 0 200px;
+        gap: 25px;
+    }
+
+    .contact-page {
+        display: flex;
+        justify-content: center;
+        gap: 150px;
+    }
+}
+
+@media all and (min-width: 1800px) {
+    .project-list {
+        margin: 0 400px;
+    }
+}

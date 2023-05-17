@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!--User story: As a <recruiter>, I want <to quickly know if this candidate is the real deal> so that <I don't was my time>.
+    As a <hiring manager>, I want <to see the breadth and depth of this candidate's knowledge> so that <I know if they can fit in with my team>.
+        A user can see the projects I've completed || A user can see the code of the projects || A user can find multiple ways to reach me.-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.production.css">
+    <link rel="icon" type="image/png" href="img/favicon.ico">
+    <title>Jeff Ellingham | Portfolio</title>
+</head>
+<body>
+    <!-- Header for name logo and main navigation -->
+    <header class="page-header">
+        <img src="img/portfolio_logo.jpg" alt="Text logo of my name" class="page-header_item logo">
+        <nav class="main-nav page-header_item">
+            <ul role="menubar" class="nav-list">
+                <li role="presentation"><a href="index.html" role="menuitem" class="nav-list_item">Home</a></li>
+                <li role="presentation"><a href="about.html" role="menuitem" class="nav-list_item">About</a></li>
+                <li role="presentation"><a href="work.html" role="menuitem" class="nav-list_item">Work</a></li>
+                <li role="presentation"><a href="contact.html" role="menuitem" class="nav-list_item nav-list_item--active">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="contact">
+        <h1>Contact</h1>
+        <div class="contact-page">
+            <form action="#" method="post" id="contact-form">
+                <div class="form-grid">
+                    <h2>Send me a quick message:</h2>
+                    <div class="form-grid_item">
+                        <label class="standard-label" for="name">Name:</label>
+                        <input type="text" id="name">
+                    </div>
+                    <div class="form-grid_item">
+                        <label for="email" class="standard-label">Email<span class="required">*</span>:</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-grid_item">
+                        <label for="phone" class="standard-label">Phone:</label>
+                        <input type="tel" id="phone" pattern="\d{3}[\-]\d{3}[\-]\d{4}">
+                    </div>
+                    <div class="form-grid_item">
+                        <label class="standard-label" for="message">Message<span class="required">*</span>:</label>
+                        <textarea name="message" id="message" cols="30" rows="4" maxlength="240" placeholder="Type your message here..."
+                            required></textarea>
+                    </div>
+                    <input type="submit" class="submit-button" value="Send message">
+                </div>
+            </form>
+            <br>
+            <div class="contact-info">
+                <h2>Or however's most convenient:</h2>
+                <!--<p>Address: 6222 Santa Monica Dr., Port Orange, FL 32127</p>-->
+                <p>Phone: <a href="tel:5133141362" aria-label="My phone number">(513)314-1362</a></p>
+                <p>Skype: <a href="skype:scamplayshockey12">Jeff Ellingham</a></p>
+                <p>Email: <a href="mailto:jeffinghamm@gmail.com">Jeffinghamm@gmail.com</a></p>
+                <br>
+                <a class="button" href="mailto:jeffinghamm@gmail.com">Contact Me</a>
+            </div>
+        </div>
+    </main>
+    <footer class="page-footer">
+        <p>Find me on:</p>
+        <div class="social-media">
+            <a href="https://www.github.com/jeffellingham" target="_blank">
+                <img src="img/github_icon.svg" width="27" height="27" alt="Github">
+            </a>
+            <a href="https://twitter.com/jeff_ellingham" target="_blank">
+                <img src="img/twitter_icon.svg" width="25" height="25" alt="Twitter">
+            </a>
+            <a href="https://www.linkedin.com/in/jeffellingham" target="_blank">
+                <img src="img/linkedin_icon.svg" width="25" height="25" alt="Linkedin">
+            </a>
+        </div>
+        <!--
+        <p>Find me on:</p>
+        <ul>
+            <li><a href="https://www.github.com/jeffellingham">Github</a></li>
+            <li><img src="http://via.placeholder.com/30x30" alt="Twitter"></li>
+            <li><a href="https://www.linkedin.com/in/jeffellingham">LinkedIn</a></li>
+        </ul>-->
+    </footer>
+<script src="js/tota11y.min.js"></script>
+</body>
+</html>
