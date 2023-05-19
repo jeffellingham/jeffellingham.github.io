@@ -453,6 +453,9 @@ label {
         justify-content: center;
         gap: 150px;
     }
+    .profile p {
+        font-size: 1.4em;
+    }
 }
 
 @media all and (min-width: 1800px) {
