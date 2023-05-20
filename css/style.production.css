@@ -124,6 +124,10 @@ button:hover, button:focus,
     font-size: 18px;
 }
 
+.about-button .button {
+    color: whitesmoke;
+}
+
 /* .button_secondary {
     background-color: var(--secondary-color);
     color: var(--dark-grey);
