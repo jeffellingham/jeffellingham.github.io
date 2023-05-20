@@ -312,12 +312,18 @@ td, th {
     display: inline-block;
     width: 33%;
 }
+.project-list_item {
+    background-color: lightgray;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 15px;
+    text-align: center;
+}
 
 @supports (display: grid) {
     .project-list {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        /* grid-template-rows: 300px 300px; */
         gap: 15px;
         margin: 5px;
         width: auto;
@@ -364,37 +370,6 @@ td, th {
 .contact-info p {
     margin: 0;
 }
-
-/* Form 30%/70% float fallback layout */
-/* .form-grid {
-    display: inline-block;
-    max-width: 33%;
-}
-
-input, textarea, .form-grid button {
-    clear: both;
-    float: right;
-    width: 70%;
-}
-
-label {
-    float: left;
-    width: 30%;
-    text-align: right;
-    padding: 0.25em 1em 0 0;
-}
-
-@supports (display: grid) {
-    .form-grid{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        max-width: auto;
-        gap: 10px;
-        margin: 5px;
-    }
-
-
-} */
 
 /* ----------MEDIA QUERIES--------- */
 
@@ -450,6 +425,7 @@ label {
     .project-list {
         margin: 0 200px;
         gap: 25px;
+        font-size: var(--small-font);
     }
 
     .contact-page {
