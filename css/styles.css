@@ -203,6 +203,18 @@ span.profile_web {
     font-size: var(--small-font);
 }
 
+.profile_portrait {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+
+.profile_portrait:hover {
+    -webkit-transform: scale(1.2);    
+    transform: scale(1.2);
+}
+
 /* -------------ABOUT PAGE----------- */
 
 .about-grid h2, .about-header, .work-header {
