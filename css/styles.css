@@ -75,6 +75,7 @@ a:active {
 button, .submit-button, .button {
     border: none;
     font-family: inherit;
+    font-size: var(--small-font);
     background-color: var(--primary-color);
     color: var(--light-font-color);
     text-decoration: none;
@@ -178,6 +179,10 @@ nav.main-nav a:hover::before, nav.main-nav a:hover::after {
     border-top: var(--border-line);
     margin-top: 35px;
     padding: 25px;
+}
+
+.page-footer a {
+    text-decoration: none;
 }
 
 /* -----------HOME PAGE----------- */
