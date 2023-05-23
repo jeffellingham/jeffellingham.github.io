@@ -107,9 +107,9 @@ button {
     padding: 10px;
     border-radius: 5px;
     border-bottom: 3px solid rgba(0, 0, 0, .3);
-    -webkit-transition: .42s opacity, .42s Font-size;
-    -o-transition: .42s opacity, .42s Font-size;
-    transition: .42s opacity, .42s Font-size;
+    -webkit-transition: .42s opacity;
+    -o-transition: .42s opacity;
+    transition: .42s opacity;
     -webkit-transition-property: opacity;
     -o-transition-property: opacity;
     transition-property: opacity;
@@ -120,8 +120,7 @@ button:hover, button:focus,
 .button:hover, .button:focus {
     /*Turns mouse into pointing hand*/
     cursor: pointer;
-    opacity: .8;
-    font-size: 18px;
+    opacity: .85;
 }
 
 .about-button .button {
