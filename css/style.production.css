@@ -240,6 +240,10 @@ nav.main-nav a:hover::before, nav.main-nav a:hover::after {
     padding: 25px;
 }
 
+.page-footer a {
+    text-decoration: none;
+}
+
 /* -----------HOME PAGE----------- */
 
 .profile_portrait {
