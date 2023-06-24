@@ -369,23 +369,62 @@ td, th {
     text-align: center;
 }
 
+
 .form-grid, .contact-info {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     margin-top: 35px;
 }
 
-.form-grid_item {
-    flex: 0 1 32px;
+.contact-info {
+    justify-content: flex-start;
 }
 
-.form-grid label {
-    font-size: var(--medium-font);
+label {
+    flex: 0 1 32px;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+
+form {
+    width: 300px auto;
+}
+
+fieldset {
+    padding: 2rem 0;
+    border: none;
+}
+
+.form-grid label, .contact-info p {
+    font-size: var(--small-font);
 }
 
 .contact-info p {
-    margin: 0;
+    margin: 2px;
+}
+
+.error-message {
+    color: red;
+    font-size: .8em;
+}
+
+textarea {
+    resize: none;
+}
+
+#count {
+    float: right;
+    font-family: 'Tahoma';
+    padding: .1rem .5rem 0 0;
+    font-size: .85rem;
+}
+
+.text-danger {
+    color: maroon;
+    font-weight: bold;
 }
 
 /* ----------MEDIA QUERIES--------- */
